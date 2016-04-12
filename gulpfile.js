@@ -22,7 +22,9 @@ gulp.task('scripts', function () {
             .concat(paths.vendor)
             .concat(paths.scripts)
         )
+        .pipe(plugins.sourcemaps.init())
         .pipe(plugins.concat('app.js'))
+        .pipe(plugins.sourcemaps.write())
         .pipe(gulp.dest(paths.destination))
 });
 
