@@ -6,6 +6,7 @@ var paths = {
         'node_modules/angular/angular.js',
         'node_modules/angular-route/angular-route.js'
     ],
+    bootstrap: 'node_modules/bootstrap/dist/**',
     scripts: 'app/**/*.js',
     partials: [
         'app/**/*.html'
@@ -14,10 +15,10 @@ var paths = {
 };
 
 gulp.task('default', ['build', 'watch']);
-gulp.task('build', ['scripts', 'templates']);
+gulp.task('build', ['copy', 'scripts', 'templates']);
 
 gulp.task('scripts', function () {
-    gulp
+    return gulp
         .src([]
             .concat(paths.vendor)
             .concat(paths.scripts)
@@ -28,8 +29,13 @@ gulp.task('scripts', function () {
         .pipe(gulp.dest(paths.destination))
 });
 
+gulp.task('copy', function () {
+    return gulp.src(paths.bootstrap)
+        .pipe(gulp.dest(paths.destination + '/bootstrap'));
+})
+
 gulp.task('templates', function () {
-    gulp.src(paths.partials)
+    return gulp.src(paths.partials)
         .pipe(gulp.dest(paths.destination))
 });
 

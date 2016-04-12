@@ -11,7 +11,8 @@
   "license": "MIT",
   "dependencies": {
     "angular": "^1.5.3",
-    "angular-route": "^1.5.3"
+    "angular-route": "^1.5.3",
+    "bootstrap": "^3.3.6"
   },
   "devDependencies": {
     "gulp": "^3.9.1",

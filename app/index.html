@@ -8,10 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script src="app.js"></script>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet"/>
 </head>
 <body>
 
-<div ng-view></div>
+<header></header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div ng-view></div>
+        </div>
+    </div>
+</div>
 <!-- inject:js -->
 <!-- endinject -->
 </body>
