@@ -1,7 +1,7 @@
 {
-  "name": "angular-interview",
+  "name": "angular-workshop",
   "version": "1.0.0",
-  "description": "0.0.1",
+  "description": "Angular Workshop",
   "main": "index.js",
   "scripts": {
     "test": "gulp test",
@@ -10,8 +10,8 @@
   "author": "Stanislav Demydiuk",
   "license": "MIT",
   "dependencies": {
-    "angular": "^1.5.3",
-    "angular-route": "^1.5.3",
+    "angular": "1.5.8",
+    "angular-route": "1.5.8",
     "bootstrap": "^3.3.6"
   },
   "devDependencies": {

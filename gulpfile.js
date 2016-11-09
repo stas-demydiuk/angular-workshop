@@ -32,7 +32,7 @@ gulp.task('scripts', function () {
 gulp.task('copy', function () {
     return gulp.src(paths.bootstrap)
         .pipe(gulp.dest(paths.destination + '/bootstrap'));
-})
+});
 
 gulp.task('templates', function () {
     return gulp.src(paths.partials)
