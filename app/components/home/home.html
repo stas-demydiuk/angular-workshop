@@ -2,6 +2,6 @@
 
 <ul>
     <li ng-repeat="task in $ctrl.tasks">
-        <a href="#/">{{ task.name }}</a>
+        <a href="#/task/{{$index}}">{{ task.name }}</a>
     </li>
 </ul>
