@@ -1,1 +1,7 @@
-<div>{{ $ctrl.message }}</div>
+<h2>Task List</h2>
+
+<ul>
+    <li ng-repeat="task in $ctrl.tasks">
+        <a href="#/">{{ task.name }}</a>
+    </li>
+</ul>

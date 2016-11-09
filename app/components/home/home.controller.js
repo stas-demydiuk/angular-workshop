@@ -1,5 +1,5 @@
-angular.module('app').controller('HomeController', function () {
+angular.module('app').controller('HomeController', function (tasks) {
     var vm = this;
 
-    vm.message = 'Hello Angular';
+    vm.tasks = tasks;
 });
