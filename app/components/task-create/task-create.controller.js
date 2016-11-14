@@ -1,5 +1,5 @@
 angular.module('app').controller('TaskCreateController',
-    function ($window, tasks) {
+    function ($window, taskService) {
         var vm = this;
 
         vm.create = create;
@@ -8,9 +8,10 @@ angular.module('app').controller('TaskCreateController',
             name: '',
             description: ''
         };
-        
+
         function create() {
-            tasks.push(vm.task);
-            $window.history.back();
+            taskService.addTask(vm.task).then(function () {
+                $window.history.back();
+            });
         }
     });

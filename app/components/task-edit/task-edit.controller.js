@@ -1,12 +1,19 @@
 angular.module('app').controller('TaskEditController',
-    function ($window, $routeParams, tasks) {
+    function ($window, $routeParams, taskService) {
         var vm = this;
 
         vm.update = update;
-        vm.task = angular.copy(tasks[$routeParams.id]);
-        
+        vm.$onInit = init;
+
+        function init() {
+            taskService.getTaskByIndex($routeParams.id).then(function (task) {
+                vm.task = task;
+            });
+        }
+
         function update() {
-            tasks[$routeParams.id] = vm.task;
-            $window.history.back();
+            taskService.updateTaskByIndex($routeParams.id, vm.task).then(function () {
+                $window.history.back();
+            });
         }
     });

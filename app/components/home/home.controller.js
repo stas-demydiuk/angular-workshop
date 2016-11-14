@@ -1,7 +1,10 @@
 angular.module('app').controller('HomeController',
-    function (tasks) {
+    function (taskService) {
         var vm = this;
 
-        vm.tasks = tasks;
+        taskService.getTasks().then(function(tasks) {
+            vm.tasks = tasks;
+        });
+
         vm.message = 'Hello Angular';
     });

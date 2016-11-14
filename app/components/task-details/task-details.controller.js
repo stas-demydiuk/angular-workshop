@@ -1,9 +1,11 @@
 angular.module('app').controller('TaskDetailsController',
-    function($window, $routeParams, tasks) {
+    function($window, $routeParams, taskService) {
         var vm = this;
 
-        vm.task = tasks[$routeParams.id];
-        vm.myvar = $routeParams.myvar;
+        taskService.getTaskByIndex($routeParams.id).then(function(task) {
+            vm.task = task;
+        });
+
         vm.goBack = goBack;
 
         function goBack() {
