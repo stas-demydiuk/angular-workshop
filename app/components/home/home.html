@@ -1,1 +1,10 @@
 <div>{{ $ctrl.message }}</div>
+
+<a class="btn btn-primary" href="#/create">Add task</a>
+
+<ul>
+    <li ng-repeat="task in $ctrl.tasks">
+        <a ng-href="#/task/{{ $index }}">{{ task.name }}</a>
+        <a ng-href="#/update/{{ $index }}">[edit]</a>
+    </li>
+</ul>
