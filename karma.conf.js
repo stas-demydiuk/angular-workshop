@@ -13,7 +13,7 @@ module.exports = function(config) {
             'app/**/!(*.spec).js': ['coverage']
         },
 
-        files: paths.vendor.concat(paths.scripts, paths.tests),
+        files: paths.vendor.concat(paths.testVendor, paths.scripts, paths.tests),
 
         reporters: ['mocha'],
 
