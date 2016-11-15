@@ -29,8 +29,6 @@
     "karma-jasmine": "^1.0.2",
     "karma-mocha-reporter": "^2.2.0",
     "karma-phantomjs-launcher": "^1.0.2",
-    "serve-static": "^1.11.1",
-    "sinon": "^1.17.6",
-    "sinon-chai": "^2.8.0"
+    "serve-static": "^1.11.1"
   }
 }
