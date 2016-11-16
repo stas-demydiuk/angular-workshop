@@ -7,7 +7,7 @@ const paths = {
         'node_modules/angular-mocks/angular-mocks.js'
     ],
     bootstrap: 'node_modules/bootstrap/dist/**',
-    scripts: 'app/**/*.js',
+    scripts: 'app/**/!(*.spec).js',
     tests: 'app/**/*.spec.js',
     partials: [
         'app/**/*.html'
